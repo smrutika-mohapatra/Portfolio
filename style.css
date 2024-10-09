@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    background:
+   linear-gradient(black, transparent),
+   linear-gradient(to top left,teal, transparent),
+   linear-gradient(to top right,black, transparent);
+    background-blend-mode: screen;
+    /* position: fixed; */
+    overflow-x: hidden;
+}
+.header{
+
+    width: 100vw;  
+    display: flex;
+    justify-content: center;
+    position: fixed; /* This will fix the header to the top of the page */
+    top: 0; /* Aligns it to the top of the viewport */
+    left: 0;
+    z-index: 1000; 
+
+}
+
+nav,h3{
+    height: 70px;
+    width: 90%;
+    /* background-color: aqua; */
+    border-radius: 50px;
+    margin-top: 20px;
+    border: 2px solid gold;
+    background: transparent;
+    top: 0;
+    left: 0;
+    padding: 7px 5%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    text-decoration: none;
+    box-shadow: 0px 0px 10px wheat;
+    background:
+   linear-gradient(rgb(7, 87, 87), transparent),
+   linear-gradient(to top left,rgb(5, 86, 86) , transparent),
+   linear-gradient(to top right,rgb(5, 65, 69), transparent);
+    background-blend-mode: screen;
+    /* position: fixed; */
+    
+}
+nav>.logo{
+    position: relative;
+    font-size: 45px;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(252, 236, 238);
+    text-shadow: 0px 7px 10px goldenrod;
+}
+nav>.navbar>a{
+    display:inline-block;        
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: 80px;
+    transition: 1s;
+    color: rgb(252, 236, 238);
+    margin-top: 10px;
+    text-shadow: 0px 5px 5px goldenrod;
+}
+nav>.navbar>a:hover{
+    color: gold;
+    text-shadow: 0px 0px 20px rgb(227, 164, 164);
+}
+
+.home,.about-content{
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin-top: -100px;
+    padding: 70px 20% 0;
+    color: white;
+    margin-top: 30px;
+}
+.home>.home-content{
+    max-width: 600px;
+}
+.about{
+    grid-template-columns: repeat(2,1fr);
+    align-items: center; 
+}
+.resume{
+    background-image: url(https://cdn.vectorstock.com/i/1000v/44/38/resume-word-lettering-design-vector-8254438.jpg);
+    background-position: center; 
+    background-size: cover;
+    padding: 13px 70px;
+    margin-left: 30px;
+    border-radius: 50px;
+    box-shadow: 0px 5
+    px 10px white;
+}
+.about>.about-content>.image>img:hover{
+    transform: rotate(340deg);
+}
+
+h2,h3{
+    font-size: 2.5em;
+    font-weight: 700;
+}
+.home-content>h1{
+    font-size: 4.5em;
+    font-weight: 700;
+    margin: -3px 0;
+    color: goldenrod;
+    text-shadow: 0px 7px 10px teal;
+}
+p{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.icon>a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid gold;
+    border-radius: 100%;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    color: rgb(185, 254, 254);
+    transition: .5s;
+    
+} 
+.icon>a:hover{
+  box-shadow: 0px 0px 7px gold;
+}
+.icon>a>svg{
+    width: 100px;
+    height: 25px;
+}
+
+.btn-box{
+    display: inline-block;
+    padding: 9px 25px;
+    background-color: rgba(253, 221, 13, 0.868);
+    border-radius: 40px;
+    font-size: 17px;
+    color: white;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 900;
+    box-shadow: 0px 0px 3px rgb(0, 255, 217);
+    text-shadow: 0px 2px 10px teal;
+}
+.btn-box:hover{
+    background-color: rgba(253, 216, 10, 0.858);
+    box-shadow: 0px 0px 10px aqua;
+}
+h4{
+    font-size: 2.5em;
+    color: goldenrod;
+}
+.skills{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 70px;
+    grid-template-columns: repeat(2,1fr);
+
+}
+.image>img{
+    transform: rotateY('360deg');
+}
+.image>img{
+    animation: Img 5s linear forwards;
+}
+@keyframes Img {
+    to{
+        transform: rotateY(360deg);
+    }
+    
+}
+
+.skills-list,.contact-text{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    justify-content: center;
+    width: 70%;
+   
+    margin-left: 15%;
+    /* align-items: center; */
+}
+.skills-list>div{
+    text-align: center;
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s ,transform 0.5s;
+    box-shadow: 1px 1px 20px goldenrod,
+    1px 1px 40px teal;
+}
+svg{
+    font-size: 2em;
+}
+.skills-list>div>img{
+    border: 5px groove  teal;
+    border-radius: 20px;  
+}
+.skills-list>div>img:hover{
+    transform: rotate(357deg);
+}
+.contact-form{
+    width: 300px;
+    height: 300px;
+}
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 3rem;
+}
+.contact-text>h2{
+    font-size: 90px;
+    line-height: 1;
+    text-align: center;
+}
+.contact-text>h2>span{
+    color: aqua;
+}
+.contact-list{
+    margin-bottom: 3rem;
+    color: white;
+    font-size: 1.5rem;
+
+}
+.contact-list>li{
+    display: block;
+    line-height: 50px;
+   /* gap: 30px; */
+}
+.contact-list>li:hover{
+    color: gold;
+    text-shadow: 0px 0px 20px rgb(227, 164, 164);
+}
+.contact-text,.Achievements{
+    text-align: center;
+    background-color: transparent;
+    padding: 30px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s ,transform 0.5s;
+    box-shadow: 1px 1px 20px goldenrod,
+    1px 1px 40px teal;
+    margin-bottom: 30px;
+}
+.contact-form{
+    position: relative;
+    box-sizing: 0px 0px 20px gold;
+}
+.contact-form>input,textarea{
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background-color: rgb(246, 246, 153);
+    color: goldenrod;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;    
+}
+.contact-form>textarea{
+    height: 130px;
+}
+.skills>.container>.Achievement{
+   
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    padding: 30px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s ,transform 0.5s;
+    box-shadow: 1px 1px 20px goldenrod,
+    1px 1px 40px teal;
+}
+.skills>.container>.Achievements{
+    width: 70%;
+    margin-left: 15%;
+   
+}
+.skills>.container>.Achievements>.Achievement>marquee>img{
+    border-radius: 20px;
+    margin-right: 10px;
+    box-shadow: 4px 0px 7px goldenrod;
+}
+.Technical-bars{
+    height: 40%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.heading {
+    font-size: 25px;
+    margin-right: 25px;
+  }
+  
+.fa {
+    font-size: 25px;
+}
+.side {
+    /* float: left; */
+    width: 45%;  
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0PX 5PX 20PX rgb(10, 248, 248);
+}
+  
+.middle {
+    float: left;
+    width: 300%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.right {
+    text-align: right;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bar-container {
+    /* width: 100%; */
+    background-color: goldenrod;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+}
+
+  .bar-5 {width: 99%; height: 7px; background-color: #04AA6D; }
+  .bar-4 {width: 98%; height: 7px; background-color: #04AA6D; }
+  .bar-3 {width: 90%; height: 7px; background-color: #04AA6D; }
+  .bar-2 {width: 85%; height: 7px; background-color: #04AA6D; }
+  .bar-1 {width: 80%; height: 7px; background-color: #04AA6D; }
+@media (max-width: 400px) {
+    .side, .middle {
+      width: 100%;
+    } 
+    .right {
+      display: none;
+    }
+}
+  
